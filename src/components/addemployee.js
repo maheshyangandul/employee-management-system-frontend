@@ -21,7 +21,8 @@ function AddEmployee() {
 
     const create = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:3001/create", config, {
+        // axios.post("http://localhost:3001/create", config, {
+        axios.post("https://employee-management-system-production-2df3.up.railway.app/create", config, {
             name: name,
             email: email,
             address: address,

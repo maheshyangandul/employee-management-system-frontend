@@ -15,7 +15,8 @@ function Employee() {
         }
     }
     useEffect(() => {
-        axios.get('http://localhost:3001/getEmployee', config)
+        // axios.get('http://localhost:3001/getEmployee', config)
+        axios.get('https://employee-management-system-production-2df3.up.railway.app/getEmployee', config)
             .then(res => {
                 if (res.data.status === "success") {
                     setData(res.data.result);
@@ -28,7 +29,8 @@ function Employee() {
     }, [])
 
     const handleDelete = (id) => {
-        axios.delete('http://localhost:3001/delete/' + id, config)
+        // axios.delete('http://localhost:3001/delete/' + id, config)
+        axios.delete('https://employee-management-system-production-2df3.up.railway.app/delete/' + id, config)
             .then(res => {
                 if (res.data.Status === "Success") {
                     window.location.reload(true);

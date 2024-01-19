@@ -30,7 +30,8 @@ function EditEmployee() {
     }
 
     useEffect(() => {
-        axios.get("http://localhost:3001/get/" + id, config)
+        // axios.get("http://localhost:3001/get/" + id, config)
+        axios.get("https://employee-management-system-production-2df3.up.railway.app/get/" + id, config)
             .then(res => {
                 console.log(res.data.Result[0])
                 setemployee(res.data.Result[0]);
@@ -42,7 +43,8 @@ function EditEmployee() {
         e.preventDefault();
 
         try {
-            await axios.put(`http://localhost:3001/update/${employeeId}`, employee, config);
+            // await axios.put(`http://localhost:3001/update/${employeeId}`, employee, config);
+            await axios.put(`https://employee-management-system-production-2df3.up.railway.app/update/${employeeId}`, employee, config);
             navigate("/");
         } catch (err) {
             console.log(err);

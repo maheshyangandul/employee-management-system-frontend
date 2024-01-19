@@ -9,7 +9,8 @@ function Signup() {
 
     const register = (e) => {
         e.preventDefault();
-        Axios.post("http://localhost:3001/register", {
+        // Axios.post("http://localhost:3001/register", {
+        Axios.post("https://employee-management-system-production-2df3.up.railway.app/register", {
             email: email,
             name: name,
             password: password,

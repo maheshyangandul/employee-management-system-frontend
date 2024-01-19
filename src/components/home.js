@@ -9,17 +9,20 @@ function Home() {
     const [salary, setSalary] = useState()
 
     useEffect(() => {
-        axios.get('http://localhost:3001/adminCount')
+        // axios.get('http://localhost:3001/adminCount')
+        axios.get('https://employee-management-system-production-2df3.up.railway.app/adminCount')
             .then(res => {
                 setAdminCount(res.data[0].admin)
             }).catch(err => console.log(err));
 
-        axios.get('http://localhost:3001/employeeCount')
+        // axios.get('http://localhost:3001/employeeCount')
+        axios.get('https://employee-management-system-production-2df3.up.railway.app/employeeCount')
             .then(res => {
                 setEmployeeCount(res.data[0].employee)
             }).catch(err => console.log(err));
 
-        axios.get('http://localhost:3001/salary')
+        // axios.get('http://localhost:3001/salary')
+        axios.get('https://employee-management-system-production-2df3.up.railway.app/salary')
             .then(res => {
                 setSalary(res.data[0].sumOfSalary)
             }).catch(err => console.log(err));
